@@ -1,0 +1,63 @@
+.rightSpace{
+    
+    /* position: relative; */
+    /* width: 400px; */
+    width:35%;
+    height: 400px;
+    float: left;
+    /* position: fixed;  */
+}
+.rightList {
+    position: relative;
+    top: 184px;
+    /* original 50px */
+    left: 0px;
+    width: 355px;
+    /* float: right; */
+    /* border: black 2px solid; */
+    padding: 5px;
+    
+}
+
+div.item {
+    margin-bottom: 10px;
+    /* border:yellow 1px solid;  */
+    display: block;
+    width: 353px;
+    height: 53px;
+
+}
+div.icon {
+    width: 53px;
+    height: 53px;
+    /* border: black 1px solid; */
+    float: left;
+
+
+}
+
+div.catagoryText {
+    background-color: white;
+    /* border: black 1px solid; */
+    float: left;
+    width: 300px;
+    height: 53px;
+    padding: 0px 8px 3px 14px;
+}
+
+
+
+span.title {
+    /* width: 250px; */
+    display: block;
+    font-family: setofont;
+    /* padding-top: 5px; */
+
+}
+
+span.discription {
+    font-size: 14px;;
+    color: #7B7B7B;
+    display: block;
+
+}

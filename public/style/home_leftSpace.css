@@ -1,0 +1,17 @@
+div.homeLeftSpace {
+    position: relative;
+    /* width: 900px; */
+    width: 65%;
+    height: 400px;
+    float: left;
+    left: 0px;
+}
+
+#carouselExampleIndicators {
+    position: relative;
+    width: 500px;
+    /* float:left; */
+    top: 219px;
+    /* original 85px */
+    left: 150px;
+}

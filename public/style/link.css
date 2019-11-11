@@ -1,0 +1,15 @@
+/* @font-face{ 
+    font-family: setofont;
+    src: url(../../fonts/setofont.ttf); 
+} */
+@import url('https://fonts.googleapis.com/css?family=Mansalva&display=swap');
+@import url(font-family.css);
+@import url(home_leftSpace.css);
+@import url(home_rightSpace.css);
+@import url(header.css);
+@import url(downList.css);
+@import url(exhibition_leftSpace.css);
+/* @imp
+ort url(font-color.css);
+@import url(font-family.css);
+@import url(font-size.css) */

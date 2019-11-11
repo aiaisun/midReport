@@ -1,0 +1,136 @@
+</div>
+<script src="/lib/jquery-3.4.1.js"></script>
+<script src="/bootstrap/js/bootstrap.js"></script>
+<script src="/lib/jquery-ui.js"></script>
+<script src="/lib/jquery-mousewheel/jquery.mousewheel.js"></script>
+<script>
+    function checkForm() {
+        return false;
+    };
+    $(document).ready(function () {
+
+        // 移到上面的title會變大
+        // 移到上面的logo會變大
+        var bigLogo = { 'width': '94px' };
+        var originalLogo = { 'width': '90px' };
+        var moveTitle = { 'padding-top': '4px', 'padding-left': '4px' };
+        var moveTitleBack = { 'padding-top': '0px', 'padding-left': '0px' };
+
+        // $('div.header').mouseover(overHeader)
+        //                .mouseout(outHeader);
+
+        // $('h1, img.logo').mouseover(overHeader)
+        //        .mouseout(outHeader);
+
+        $('h1, img.logo').hover(overHeader, outHeader);
+
+        function overHeader() {
+            $('img.logo').css(bigLogo);
+            $('h1').css(moveTitle);
+        }
+        function outHeader() {
+            $('img.logo').css(originalLogo);
+            $('h1').css(moveTitleBack);
+        }
+
+        // 移到右邊的項目會變大
+        var moveItem = { 'padding-top': '3px' };
+        var moveItemBack = { 'padding-top': '0px' };
+
+        $('div.item').hover(overCatagory, outCatagory)
+
+        function overCatagory() {
+            $(this).css(moveItem);
+        }
+        function outCatagory() {
+            $(this).css(moveItemBack);
+        }
+        //
+
+        $(function () {
+            $("#datepicker").datepicker();
+        });
+
+        $('.calendar').click(function () {
+            $('#datepicker').click();
+        });
+        //訂閱按鈕隱藏切換至自訂li標籤
+        $('button.subscribe').hide();
+        $('li.subscribe').click(function () {
+            $('button.subscribe').click();
+        });
+        checkForm();
+        //表單確認
+
+        //選取all全部地點都會勾選
+        //相反 取消華山選全部
+        // $('#Toggle').change(function () {
+        //     var Toggle = $(this).prop('checked');//有勾為true 沒勾為flase
+        //     $('#place').prop('checked', !Toggle);
+
+        // })
+
+        // $('#place').change(function () {
+        //     console.log('hi')
+        //     var Toggle = $(this).prop('checked');//有勾為true 沒勾為flase
+        //     $('#Toggle').prop('checked', !Toggle);
+
+        // })
+
+        //原本的勾一全選
+        //     $(':checkbox[name="place"]').change(function () {
+
+        //         $.each($(':checkbox[name="place"]'), function () {
+        //             var placeStatus = $(this).prop('checked');
+        //             console.log(placeStatus);
+        //             if (placeStatus == false) {
+        //                 $('#Toggle').prop('checked', placeStatus);
+        //             }
+        //         })
+        // });
+
+
+
+        //     $(':checkbox[name="place"]').change(function () {
+
+        //         $.each($(':checkbox[name="place"]'), function () {
+        //             var placeStatus = $(this).prop('checked');
+        //             console.log(placeStatus);
+        //             if (placeStatus == false) {
+        //                 $('#Toggle').prop('checked', placeStatus);
+        //             }
+        //         })
+        // });
+        // $(':checkbox[name="place"]').change(function () {
+        //     var Toggle = $(this).prop('checked');//有勾為true 沒勾為flase
+        //     $('#Toggle').prop('checked', Toggle);
+        //     // if (Toggle == True){
+        //     //     $('#Toggle').prop('checked', flase);
+        //     // } 
+        //     // else
+        //     // $('#Toggle').prop('checked', Toggle);
+
+        // })
+
+        //  地點效果
+        var changetoBold = { 'fontWeight': 'bold' };
+        var changetoSlim = { 'fontWeight': 'normal' };
+
+
+        $('li.titlePlace').hover(overPlace, outPlace);
+
+        function overPlace() {
+            $(this).css(changetoBold);
+        }
+        function outPlace() {
+            $(this).css(changetoSlim);
+        }
+
+        //首頁圖片速度
+        $('.carousel').carousel({
+            interval: 2000
+        })
+
+
+    });
+</script>

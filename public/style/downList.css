@@ -1,0 +1,36 @@
+div.downSpace { 
+    /* background-color: #97AFA5; */
+    float: left;
+    width: 100%;
+}
+/* ul.downList {
+    
+} */
+
+li.place {
+    list-style: none;
+    margin-right: 1.2%;
+    float: left;
+    /* width: 40px; */
+    
+    
+}
+div.placeNameBlock {
+    width: 46px;
+    text-align: center;
+    background-color: #D0D0D0;
+    padding: 10px 15px 20px 15px; 
+    float: left;
+    
+}
+
+div.placeName {
+    line-height: 20px;
+    
+}
+
+div.placeInfo {
+    width: 250px;
+    /* background-color: lightgrey; */
+    float: left;
+}

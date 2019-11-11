@@ -1,0 +1,58 @@
+<%- include('parts/html_head') %>
+<%- include('parts/title') %>
+<div class="expoLeftSpace">
+    <form>
+    <div class="selectPlace">
+        <input type="checkbox" id="Toggle" <% place ?'checked=""':''%>>
+        <label for="Toggle" style="margin-right:15px;">All</label>
+        <input type="checkbox" id="place" name="place" value="huashan" <%= place==='huashan' ?'checked=""':''%>>
+        <label for="huashan">華山文化園區&nbsp;&nbsp;</label>
+        <input type="checkbox" id="place" name="place" value="songshan" <%= place==='songshan' ?'checked=""':''%>>
+        <label for="songshan">松山文創園區&nbsp;&nbsp;</label>
+        <input type="checkbox" id="place" name="place" value="science" <%= place==='science' ?'checked=""':''%>>
+        <label for="science">科學教育館&nbsp;&nbsp;</label>
+        <input type="checkbox" id="place" name="place" value="pier2" <%= place==='pier2' ?'checked=""':''%>>
+        <label for="pier2">駁二藝術特區&nbsp;&nbsp;</label>
+        <!-- <span>Date: <input type="text" id="datepicker"></span> -->
+    </div>
+    <div class="selectDate">
+
+        <span><i class="far fa-calendar-alt"></i>
+            <input type="text" id="datepicker">
+        </span>
+        <input type="submit" value="篩選">
+    </div>
+    </form>
+    
+
+    <div class="exhibition">
+        <ul class="exha">
+            <% for( let i = 0; i < data.length; i++){  
+                let item = data[i] %>
+            <li class="exhibition">
+                <div class="pic">
+                    <a href="<%= item['link']%>">
+                        <img class="exhi" src="/images/expo/<%= item['id'] %>.jpg">
+                    </a>
+                </div>
+                <div class="exhibitionInfo">
+                    <div class="date">
+                        <span class="date"><%= item['date']%></span>
+                        <span class="place""><%= item['place']%></span>
+                    </div>
+                    <a style="color:black; text-decoration: none" href="<%= item['link']%>" "><h3 class=" exhititle"><%= item['name']%></h3></a>
+                    
+                            <p><%= item['intro']%><span><a style="color:#7B7B7B;text-decoration: none" href="<%= item['link']%>">(more...)</a></span></p>
+                            
+                    </div>
+            </li>
+            <% }%>
+        </ul>
+    </div>
+
+</div>
+
+<%- include('parts/rightSpace') %>
+<%- include('parts/subscribe') %>
+<%- include('parts/script') %>
+<%- include('parts/html_foot') %>
